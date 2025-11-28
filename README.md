@@ -134,13 +134,15 @@ Beta testing results showed “Strongly Agree” ratings for functional suitabil
 ├── assets/ # Images, icons, and static files
 └── docs/ # Documentation and supporting files
 
-## Getting Started
+## Installation and Setup
 
 ### Prerequisites
 
-- PHP (version compatible with your code)
+- PHP 
 - Node.js and npm
 - MySQL or MariaDB
-- Composer (if you are using dependencies via Composer)
-- Git (optional)
+- Composer 
+- Git
+### Installation
 
+1. Clone the repository:
