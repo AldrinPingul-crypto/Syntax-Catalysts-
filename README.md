@@ -1,64 +1,130 @@
 # Smart Barangay Governance System
 
-## About the Project
+A web-based barangay management platform designed for Barangay Pitogo to streamline document processing, complaint handling, business permit management, online services, and citizen feedback. The system supports local governance by digitizing manual processes, integrating basic machine learning features, and improving communication between residents and barangay officials. [attached_file:68]
 
-The Smart Barangay Governance System is a web-based platform developed for local Philippine barangays to streamline administrative services, enhance community communication, and improve governance efficiency. Built using Laravel, it addresses common challenges in manual barangay operations, such as document processing delays, limited feedback handling, and low resident engagement.
+## System Overview
 
-This system automates key tasks to promote transparency, accountability, and citizen participation, aligning with e-governance goals and Sustainable Development Goal 17 (Partnerships for the Goals). It supports barangay officials in managing requests, complaints, and announcements while providing residents with a user-friendly interface for accessing services.
+The Smart Barangay Governance System (Barangay Pitogo Smart Management System) provides a centralized online portal where residents can request documents, file complaints, view announcements, and receive updates, while barangay officials manage requests, permits, and feedback through an admin dashboard. [attached_file:68]
 
-Key benefits include:
-- Reduced manual paperwork and processing time.
-- Real-time updates and secure data handling.
-- Data-driven insights through sentiment analysis and record filtering.
-- Alignment with ISO 25010 quality characteristics for functionality, security, and usability.
+The system aims to:
+- Reduce long queues and manual paperwork at the barangay hall.
+- Provide real-time, transparent updates on requests and complaints.
+- Enhance community engagement through timely announcements and feedback channels. [attached_file:68]
 
-The system was developed by Syntax Catalysts, IT students from Jose Rizal University, as part of a capstone project.
+## System Components
 
-## Features
+### 👥 Resident Portal
 
-- **Online Document Request Module**  
-  Residents can submit requests for barangay clearances, certificates, and permits online, with status tracking and secure payment integration (e.g., GCash QR codes shown only after admin approval).
+A web interface where residents can:
+- Register and log in with verified accounts.
+- Request clearances, permits, and certifications.
+- Submit complaints and feedback.
+- View community announcements and the status of their requests. [attached_file:68]
 
-- **Complaint and Feedback Management**  
-  Residents can file complaints and provide feedback through a dedicated module. The system now evaluates resident comments for sentiment (positive, negative, or neutral) based solely on comment content. The star rating feature was removed to ensure that sentiment analysis is accurately performed using actual feedback.
+### 🏛️ Admin & Staff Portal
 
-- **Community Announcement Board**  
-  Barangay officials can post real-time updates, announcements, advisories, and events, allowing residents to stay informed about barangay activities and important notices.
+A management interface for barangay officials and staff to:
+- Approve or reject document and permit requests.
+- Manage complaints and feedback records.
+- Post announcements and advisories.
+- Monitor system activity and generate basic reports. [attached_file:68]
 
-- **Administrative Dashboard**  
-  A centralized dashboard enables barangay officials to monitor document requests, complaints, payments, and user accounts. Filters are available for all record lists (requests, complaints, collections), enabling administrators and staff to effectively search and manage entries.
+### 📊 Machine Learning & Analytics
 
-- **Enhanced User Verification**  
-  Account registration requires proof of residency (e.g., Barangay ID or utility bill with address). Senior Citizens and PWDs must upload valid supporting documents. When a user selects "Voter," the submission of a voter ID or certificate is mandatory during the registration process.
+- Text classification to categorize complaint/blotter entries based on content (e.g., theft, conflict, injury). [attached_file:68]
+- Time series forecasting for business permit applications to anticipate peak periods. [attached_file:68]
+- Sentiment analysis of citizen feedback (positive, negative, neutral) to understand satisfaction and priority issues. [attached_file:68]
 
-- **Payment and Record Management**  
-  Online payments via GCash QR codes are allowed only after administrative approval of requests to ensure proper workflow and security. Approved transactions and collections are logged for transparency and auditing.
+## Key Features
 
-- **Machine Learning Integration (Sentiment Analysis)**  
-  The system uses natural language processing to classify resident feedback into positive, negative, or neutral sentiment, helping barangay officials understand citizen satisfaction and prioritize improvements.
+### 📝 Online Document & Permit Requests
 
-## Technology Stack
+- Residents can apply online for:
+  - Barangay clearances
+  - Permits
+  - Certifications
+- Requests are stored in the system and visible to barangay staff via the admin dashboard.
+- Residents can track request status (e.g., pending, processing, approved). [attached_file:68]
 
-- **Framework**: Laravel (PHP)
-- **Language**: PHP, Blade templates, JavaScript
-- **Database**: MySQL
-- **Frontend**: Blade, Bootstrap (or similar CSS framework)
-- **Authentication**: Laravel authentication with role-based access (e.g., admin, staff, resident)
-- **Tools & Integrations**:
-  - GCash QR for digital payments
-  - NLP-based sentiment analysis for resident comments
-- **Architecture**: MVC pattern with Eloquent ORM and database migrations
+### 📣 Complaint & Feedback Module
 
-## Installation and Setup
+- Residents submit complaints and feedback using structured online forms.
+- System records details and allows officials to update status (pending, under review, resolved).
+- Text classification is used to group complaints by category and support faster resolution.
+- Feedback is analyzed using sentiment analysis to identify common concerns and service satisfaction. [attached_file:68]
 
-### Prerequisites
+### 📌 Community Announcement Board
 
-- PHP >= 8.1  
-- Composer  
-- MySQL or compatible database  
-- Node.js and NPM (for frontend assets)  
-- Git (optional but recommended)
+- Barangay officials can post:
+  - Announcements
+  - Advisories
+  - Events
+  - Emergency information
+- Residents see announcements in their dashboard, improving awareness and participation. [attached_file:68]
 
-### Steps
+### 👤 User Registration & Verification
 
-1. Clone the repository:
+- Residents register with:
+  - Personal information and complete address
+  - Proof of residency (e.g., barangay ID or utility bill)
+- Senior Citizen / PWD users upload supporting documents.
+- Voter status requires voter ID or certificate during registration.
+- Role-based access control for Residents, Staff, and Admins. [attached_file:68]
+
+### 🧾 Record Management & Filtering
+
+- Admin dashboard to:
+  - View and filter document requests
+  - Manage complaints and feedback records
+  - Monitor business permit applications
+- Filters support efficient searching and organization of records. [attached_file:68]
+
+### 🔐 Quality & Evaluation (ISO 25010:2023)
+
+The system was evaluated using ISO 25010:2023 on:
+- Functional Suitability
+- Performance Efficiency
+- Compatibility
+- Interaction Capability (Usability)
+- Reliability
+- Security
+- Maintainability
+- Flexibility
+- Safety [attached_file:68]
+
+Beta testing results showed “Strongly Agree” ratings for functional suitability, performance efficiency, compatibility, and usability. [attached_file:68]
+
+## Tech Stack
+
+### Frontend
+
+- **HTML5**, **CSS3**, **JavaScript**
+- **React.js** for dynamic, component-based UI
+- **Bootstrap** (or similar) for responsive and mobile-friendly design [attached_file:68]
+
+### Backend
+
+- **PHP** for server-side logic and handling requests
+- **Node.js** (optional) for asynchronous tasks such as notifications and real-time updates
+- **RESTful APIs** for communication between frontend and backend modules [attached_file:68]
+
+### Database
+
+- **MySQL** as the relational database to store:
+  - Users and roles
+  - Document and permit requests
+  - Complaints and feedback
+  - Announcements and logs [attached_file:68]
+
+### Hosting & DevOps
+
+- Deployed on platforms such as **AWS** or **Heroku**
+- **Docker** for containerization and easier deployment
+- **CI/CD tools** (e.g., GitLab CI, Travis CI) for continuous integration and deployment [attached_file:68]
+
+### Data Analysis Tools
+
+- **Microsoft Excel** and **Google Sheets** for survey data encoding and visualization
+- **SPSS** for statistical analysis and reliability testing during system evaluation [attached_file:68]
+
+## Project Structure (High-Level)
