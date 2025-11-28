@@ -116,11 +116,9 @@ Beta testing results showed “Strongly Agree” ratings for functional suitabil
   - Complaints and feedback
   - Announcements and logs 
 
-### Hosting & DevOps
+### Hosting
 
-- Deployed on platforms such as **AWS** or **Heroku**
-- **Docker** for containerization and easier deployment
-- **CI/CD tools** (e.g., GitLab CI, Travis CI) for continuous integration and deployment
+- Hosted on **Hostinger** using a standard PHP and MySQL hosting environment for deployment and public access. 
 
 ### Data Analysis Tools
 
@@ -146,6 +144,3 @@ Beta testing results showed “Strongly Agree” ratings for functional suitabil
 - Composer (if you are using dependencies via Composer)
 - Git (optional)
 
-### Installation
-
-1. Clone the repository:
