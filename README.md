@@ -1,1 +1,1 @@
-# Syntax-Catalysts-
+# Syntax Catalysts
